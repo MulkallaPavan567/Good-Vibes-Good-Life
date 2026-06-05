@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Life's Little Thoughts · Good Vibes, Good Life | Expanded Wisdom</title>
+  <meta name="description" content="Every insight from Good Vibes, Good Life by Vex King, plus Manifesting Goals sections, Curated by Pavan Mulkalla for @__lifes_little_thoughts__.">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #FDF8F2;
+      font-family: 'Inter', sans-serif;
+      color: #2C241E;
+      line-height: 1.5;
+    }
+
+    .bg-atmosphere {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 10%, rgba(245, 225, 200, 0.5), rgba(252, 244, 235, 0.95));
+      z-index: -2;
+    }
+
+    .floating-glow {
+      position: fixed;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, rgba(230, 200, 170, 0.2), transparent);
+      border-radius: 50%;
+      filter: blur(60px);
+      z-index: -1;
+      animation: drift 20s infinite alternate;
+    }
+
+    @keyframes drift {
+      0% { transform: translate(-10%, -5%) scale(1); opacity: 0.4; }
+      100% { transform: translate(15%, 10%) scale(1.3); opacity: 0.6; }
+    }
+
+    .glow1 { top: -20%; left: -15%; }
+    .glow2 { bottom: -10%; right: -10%; animation-duration: 25s; }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* hero */
+    .hero {
+      text-align: center;
+      background: rgba(255, 250, 242, 0.7);
+      backdrop-filter: blur(2px);
+      border-radius: 56px;
+      padding: 1.8rem 1.5rem;
+      margin-bottom: 2.8rem;
+      border: 1px solid #F2E2D4;
+      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.05);
+    }
+
+    .logo-img {
+      max-width: 160px;
+      border-radius: 40px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .instagram-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #F0E2D8;
+      padding: 6px 24px;
+      border-radius: 80px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #7F5A4B;
+      text-decoration: none;
+      margin: 1rem 0 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .instagram-badge i { font-size: 1rem; }
+    .instagram-badge:hover { background: #E7D5C8; transform: translateY(-2px); }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #3E2A1F, #9B6E56);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-top: 0.3rem;
+    }
+
+    .subhead {
+      font-size: 0.9rem;
+      color: #A07A62;
+      border-top: 1px solid #EAD9CD;
+      display: inline-block;
+      padding-top: 0.7rem;
+    }
+
+    /* each quote card — visually distinct */
+    .quote-card {
+      background: white;
+      border-radius: 28px;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0,0,0,0.03);
+      transition: all 0.2s ease;
+      border-left: 5px solid #E6C9B5;
+      position: relative;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .quote-card:hover {
+      transform: translateX(6px);
+      background: #FFFCF8;
+      box-shadow: 0 12px 22px -12px rgba(80, 50, 30, 0.12);
+      border-left-color: #C9A07E;
+    }
+
+    .quote-icon {
+      flex-shrink: 0;
+      font-size: 1.4rem;
+      color: #CDA788;
+      width: 2rem;
+      text-align: center;
+      margin-top: 0.1rem;
+    }
+
+    .quote-text {
+      flex: 1;
+      font-size: 1rem;
+      line-height: 1.55;
+      color: #2E241F;
+      font-weight: 400;
+    }
+
+    .section-group {
+      background: rgba(255, 251, 245, 0.7);
+      border-radius: 44px;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem 1.2rem;
+      backdrop-filter: blur(2px);
+      box-shadow: 0 8px 20px -8px rgba(0,0,0,0.05);
+      border: 1px solid #F4E6DC;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.5rem;
+      margin-top: 0.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px dashed #EAD6C8;
+      color: #3C2A1F;
+    }
+
+    .section-title i {
+      font-size: 1.8rem;
+      color: #C5926E;
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        padding: 1.2rem 1rem 3rem;
+      }
+      .quote-card {
+        padding: 0.9rem 1.2rem;
+        gap: 0.7rem;
+      }
+      .quote-icon {
+        font-size: 1.1rem;
+        width: 1.6rem;
+      }
+      .section-title {
+        font-size: 1.7rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 2.5rem;
+      background: rgba(250, 240, 230, 0.6);
+      border-radius: 60px;
+      padding: 1.3rem;
+      font-size: 0.85rem;
+      color: #B2876B;
+    }
+  </style>
+</head>
+<body>
+<div class="bg-atmosphere"></div>
+<div class="floating-glow glow1"></div>
+<div class="floating-glow glow2"></div>
+
+<div class="container">
+  <div class="hero">
+    <div style="display: flex; justify-content: center;">
+      <img class="logo-img" src="images/Life's_Little_Thoughts_logo.jpg" alt="Life's Little Thoughts" onerror="this.style.opacity='0.7'">
+    </div>
+    <a href="https://instagram.com/__lifes_little_thoughts__" target="_blank" class="instagram-badge">
+      <i class="fab fa-instagram"></i> @__lifes_little_thoughts__
+    </a>
+    <h1>GOOD VIBES, GOOD LIFE<br>How Self-Love is the key to unlocking your Greatness</h1>
+    <div class="subhead">Curated by Pavan Mulkalla · from the book by Vex King</div>
+  </div>
+
+  <!-- ========= EXISTING SECTIONS (1-5, intact) ========= -->
+  
+  <!-- Opening section (before 1) -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-seedling"></i> Opening Reflections</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-feather-alt"></i></div><div class="quote-text">I look back on my memories and embrace everything that happened; there's a lesson to be learned from every event. I realize that the good, the bad and the downright ugly events are all a part of who I've become.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-globe"></i></div><div class="quote-text">I believe that every person on this planet is here to make a difference. By living to your full potential, you'll not only change your world, you'll change the world around you, too.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-star"></i></div><div class="quote-text">Greatness is about becoming the greatest version of yourself. The greatness mentality means living a life without limits, where there are infinite possibilities.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-user-check"></i></div><div class="quote-text">Stop trying to impress people. Impress yourself. Stretch yourself. Test yourself. Be the best version of you that you can be.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-heart"></i></div><div class="quote-text">Greatness cannot exist without purpose, love, selflessness, humility, appreciation, kindness and, of course - our highest priority as human beings - happiness. Be better than who I was yesterday.</div></div>
+  </div>
+
+  <!-- 1. What is self-love? -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-hand-holding-heart"></i> 1. What is self-love?</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-balance-scale"></i></div><div class="quote-text">To achieve a sense of peace, we need balance: balance between work and play, between action and patience, spending and saving, laughter and seriousness, leaving and staying.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hand-peace"></i></div><div class="quote-text">They're taking your kindness for granted. It's important to recognize that it's not unjust to let go of those who show no concern for you.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-smile"></i></div><div class="quote-text">By taking a balanced approach, you can feel more at ease and avoid any bad feelings, such as guilt.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-heartbeat"></i></div><div class="quote-text">Self-love is the balance between accepting yourself as you are while knowing you deserve better, and then working towards it.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-spa"></i></div><div class="quote-text">True self-love is when you appreciate where you are and who you are, regardless of any transformation you aspire to.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-brain"></i></div><div class="quote-text">Without the balance between Mindset and Action we'll regularly stumble, fall and feel lost. When you love yourself, life will begin to love you back.</div></div>
+  </div>
+
+  <!-- 2. A Matter of Vibes? -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-music"></i> 2. A Matter of Vibes?</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-stopwatch"></i></div><div class="quote-text">Whatever you focus on will be returned to you. I was running out of time.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-magnet"></i></div><div class="quote-text">Law of Attraction stresses the importance of thinking about what you want, rather than focusing on things you fear or dread.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-fire"></i></div><div class="quote-text">Anger had always got the better of me. Things got out of control and harsh words were exchanged; unfortunately, there was no way to fix the issue.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-road"></i></div><div class="quote-text">I always knew I wouldn't end up in a traditional job. I was so close to the finish line, it was all going to be taken away from me. It was all for nothing.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-cloud-rain"></i></div><div class="quote-text">I was overcome by negative thoughts. I was fed up with the endless problems and I wanted to leave everything behind. I had no reason to live and no purpose in life.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-brain"></i></div><div class="quote-text">My low state even led me to revisit some of my worst memories, which just added more fuel to the fire, convincing me that my life was worthless.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-lightbulb"></i></div><div class="quote-text">What was the point in having dreams if I could never manifest them? I convinced myself I was living a lie and kidding myself that I could do big things.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-frown"></i></div><div class="quote-text">It seemed clear right then: great things were never meant for me. I'd expended so much energy trying to find a way out of the problem, but now it was time to face what had to be done and hope for the best.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-leaf"></i></div><div class="quote-text">Over the years I've gained clarity and sighed with relief for not getting what I thought was surely meant for me. Often, I've not got what I wanted, only to find I've later been blessed with even more.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-wand-magic-sparkles"></i></div><div class="quote-text">We are what we are, because of the vibrations of thought which we pick up and register, through the stimuli of our daily environment. Change the way you think, feel, speak and act, and you begin to change your world.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hand-sparkles"></i></div><div class="quote-text">To receive or perceive the reality you wish to have, you must be in energetic harmony with that which you desire. This means that our thoughts, emotions, words and actions must align with what we want.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-theater-masks"></i></div><div class="quote-text">Emotions show a true reflection of your energy. Sometimes we can believe we're in a positive state of mind or taking good actions, but deep down we know we're not; we're just pretending.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-smile-beam"></i></div><div class="quote-text">When you feel good, your life also appears to be good. If you could continuously experience good vibes, you'd always view your life in a positive light.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-heart-broken"></i></div><div class="quote-text">Ideally, we want to feel as loving and joyful as we can in life. In contrast, feelings of hatred, anger and despair have a very low vibration. They'll attract more of what we don't want.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-recycle"></i></div><div class="quote-text">The feelings we project are returned on a like-for-like basis through our experiences. The feelings we put out into the Universe will be returned to us through matching vibrations.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-gift"></i></div><div class="quote-text">So, if you send out feelings of joy, then you'll be given more things to feel joyful about. The common misconception is that you'll feel good only once you have what you want. The truth is that you can feel good right now.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chart-line"></i></div><div class="quote-text">By taking positive actions and changing your mindset, you'll manifest greater things. By loving yourself, you'll live a life you love.</div></div>
+  </div>
+
+  <!-- 3. Positive Lifestyle Habits -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-leaf"></i> 3. Positive Lifestyle Habits</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-seedling"></i></div><div class="quote-text">New actions and changing your mindset in a positive way are also elements of self-love, to become the best - and happiest - person you can be.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-users"></i></div><div class="quote-text">Surround yourself with people who are vibing higher than you. Be around people who are feeling better than you are. Energy is contagious.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-laugh-beam"></i></div><div class="quote-text">I've changed my emotional state many times just by being around cheerful people. Positive people can also provide empowering perspectives on our problems.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-handshake"></i></div><div class="quote-text">So, make a commitment to build meaningful and lasting relationships with positive people. When you spend more time with people who add value to your life and elevate your mood, you'll begin to adopt their encouraging thinking patterns and reflect their vibrations back at them.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-theater-masks"></i></div><div class="quote-text">Fake it until you make it. Don't underestimate the importance of taking time to relax.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-bed"></i></div><div class="quote-text">Sometimes, we get so caught up in our lives and what's going on around us that we become overwhelmed and tense. The feeling of wanting to be away from people after spending time with them.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-tree"></i></div><div class="quote-text">It's also very powerful to spend some time in nature. However, being out in nature can help to replenish and rejuvenate your entire being. Sometimes you have to unplug yourself from the world for a moment, so you can reset yourself.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-church"></i></div><div class="quote-text">I was beginning to lose faith in myself and my abilities. I started learning about other people's hardships and how they overcame them, even when the odds were against them.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-mountain"></i></div><div class="quote-text">Anyone who has accomplished anything great has faced big challenges or failures. But they're only final if you quit.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-tv"></i></div><div class="quote-text">Drama is for TV, not for real life. Don't play a part in someone else's episode in which they are the only star.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-comment-dots"></i></div><div class="quote-text">When we discuss others in a negative way, we're sending negative energy out into the Universe. As a result, this lowers our own vibration, resulting in toxic events in our lives that will reproduce ill feelings.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-ear-listen"></i></div><div class="quote-text">So, distance yourself from conversations about others, or try to direct the discussion to something more positive. I've learned to avoid drama at all costs because it does nothing good for me. I simply stayed silent and observed, until I could distance myself.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-brain"></i></div><div class="quote-text">When you're upset because someone doesn't like you, it's your ego operating: you validate your existence based on their approval.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-compass"></i></div><div class="quote-text">I try to keep an open mind and to listen to other people's perspectives. Make sure that you don't involuntarily take part in the internal battles of others.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hourglass-half"></i></div><div class="quote-text">Time is precious and you should be investing it wisely by doing something constructive that will make your life greater. What you consume, consumes you; what consumes you, controls your life.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hands-praying"></i></div><div class="quote-text">Being thankful is one of the simplest, and yet most powerful, habits you can cultivate. You can't feel bad while you're feeling thankful. Greatness starts with being grateful.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-heart"></i></div><div class="quote-text">You can't feel joy without being thankful; being thankful is a vital component of happiness. The key to showing gratitude is to feel thankful.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chart-line"></i></div><div class="quote-text">Remember, there might be many things in your world that are going wrong. Yet there are also many things that are going right. The more you count your blessings, the more blessings you'll have to count.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-lightbulb"></i></div><div class="quote-text">I was aware that the problem was there, but I was feeding the problem rather than focusing on a solution – once I started to do that, things started to get better.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-shield"></i></div><div class="quote-text">Too many of us direct our energy towards our fears. I'm not saying your problems don't exist, but try instead to focus your energy on solutions to those problems.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-eye"></i></div><div class="quote-text">The illusion of fear is the only limitation we have. Introspection is so important to personal development.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-crown"></i></div><div class="quote-text">Joy wasn't dependent on how others interacted with us. I love myself and that is enough. The love I give myself will be given back to me by someone who truly cares about me.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-repeat"></i></div><div class="quote-text">Repetition is the key to mastery. Living through a screen prevents us from being present in the moment. We ignore the people around us and our personal relationships pay the price.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-clock"></i></div><div class="quote-text">We relive moments of the past, fear the future and create obstacles in our minds. We devote creative energy to destructive ideas - and this invites turmoil into our lives.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hourglass-start"></i></div><div class="quote-text">Now is the only time you have. Once your past is gone, it doesn't exist, no matter how many times you recreate it mentally. Nothing is more valuable than the present moment because you can never get it back.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-brain"></i></div><div class="quote-text">We wait for success, love, happiness to show up, never really aware of what we have in the present moment. We make life all about a future that exists only in our imagination and completely miss what's happening in front of us.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-spa"></i></div><div class="quote-text">Meditation brought ability to remain calm and at peace in the midst of chaos.</div></div>
+  </div>
+
+  <!-- 4. Make yourself a Priority -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-user-astronaut"></i> 4. Make yourself a Priority</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hand-peace"></i></div><div class="quote-text">It's not selfish or a sign of weakness to distance yourself or walk away from those who constantly bring down your vibe. Life is about balance. It's about spreading kindness, but it's also about not letting anyone take that kindness away from you.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-user-shield"></i></div><div class="quote-text">You came into this world alone and you'll leave on your own. Your longest relationship in life is with yourself. Only when you manage this relationship well can you manage your relationships with others. So sometimes you have to cut out those people who continuously cut you.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-skull-crossbones"></i></div><div class="quote-text">We want everyone else to stop being toxic, but we rarely review our own actions. So it's important that you can identify any toxic tendencies you might have and that are hurting others - or yourself.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chart-line"></i></div><div class="quote-text">Always review your behaviours and make an effort to change any that are toxic - towards yourself or others. This isn't only how you grow, it's also an act of self-love. You're showing yourself that you deserve better than the behaviours limiting your progress.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-handshake"></i></div><div class="quote-text">We're quick to point out what's wrong with someone else so that we can avoid taking responsibility for our own actions. You have to try to seek understanding first. Identify why they feel the way they do and then see what you can do to make it better.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-users"></i></div><div class="quote-text">This is important for all relationships. We're all different and we all deserve respect for our feelings. Acknowledging and understanding someone's pain not only allows you to learn about them, but also helps you to grow.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-arrow-right-to-bracket"></i></div><div class="quote-text">You're not expected to be flawless. We all make mistakes. But you must be willing to learn, grow and remain respectful. Walking away from something unhealthy shows great bravery, even if you stumble a little on your way out of the door.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-door-open"></i></div><div class="quote-text">You can extract yourself from situations in which you're not respected. We give ourselves up to someone who doesn't respect us enough to treat us well in return. None of us is perfect, so no relationship is perfect. You can't change those who aren't ready to change.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-child"></i></div><div class="quote-text">As a parent, you have natural protective instincts over your child. Even if you don't have a child, you can probably imagine it. Don't be in a relationship for the sake of being in one. If it's time to say goodbye, be brave and do it. It might hurt now, but it will be the source of something greater in the future.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-globe"></i></div><div class="quote-text">You can only do great things for others in the world if you genuinely feel joyful, loving and accomplished. If the people around you choose different paths or aren't quite where you are, that's okay. If they're supposed to be in your life, sooner or later they'll be there; your journeys will align again eventually.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-heart"></i></div><div class="quote-text">When they find out that they're actually hurting you, they may very well change their ways. To recognize love in spite of criticism, you have to understand that everyone's perspective – including your own – is limited and subjective.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-brain"></i></div><div class="quote-text">People tend to fear what they can't understand. If you want their support, you have to build their trust. Show them how one should behave, even if being treated unfairly. It's vital to remember that you cannot change others unless they want to change themselves.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-scissors"></i></div><div class="quote-text">If you need to cut someone off because of continued destructive behaviour, then do it with no regrets. Before you try to fix someone else's vibe, make sure you're not killing your own in the process. Protect your own energy first.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-shield"></i></div><div class="quote-text">I created some distance between us for a while, keeping our interactions to a minimum. Inside, I was punishing myself for not being there for him more; I felt that I had to be God-like and simply accept it. I'm still careful to protect my energy from people who want to drain it or abuse my willingness to help them.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-face-smile"></i></div><div class="quote-text">Not everyone is going to get you, accept you or even try to understand you. Some people will just not receive your energy well. Make peace with that and keep on moving towards your joy.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-mask"></i></div><div class="quote-text">If people aren't the same as us, we're more likely to label them as misfits and to mock them. Nobody can hurt me without my permission. Don't allow the cruelty of others to define your future.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-comment"></i></div><div class="quote-text">What people say about you says more about them than about you. When others judge you, they reveal themselves. If you keep trying to satisfy others, you will never keep up. In the end, you will satisfy neither them nor yourself. Someone will always see a flaw in you. Some people labelled me as fake.</div></div>
+  </div>
+
+  <!-- 5. Accepting Yourself -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-feather-alt"></i> 5. Accepting Yourself</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-user"></i></div><div class="quote-text">You won't be important to other people all the time, and that's why you have to be important to yourself. Learn to enjoy your own company. Take care of yourself. Encourage positive self-talk – and become your own support system. Your needs matter, so start meeting them yourself. Don't rely on others.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hand-holding-heart"></i></div><div class="quote-text">The power of love and kindness is enormous, and sharing it with others can transform the world. The power of love and kindness is enormous, and sharing it with others can transform the world.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-crown"></i></div><div class="quote-text">You'll know your worth, so you won't care if others don't recognize it.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-clone"></i></div><div class="quote-text">Most people don't accept themselves, they search for flaws in others. There are no rules to beauty. Accept and love yourself as you are. Embrace your flaws and get comfortable in your own skin. Wear your imperfections like they don't need a season to be fashionable.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-tshirt"></i></div><div class="quote-text">You simply cannot satisfy everyone. The size of your jeans doesn't define you. The colour and shade of your skin doesn't define you. That number on the scales doesn't define you. Those marks on your face don't define you. Those expectations don't define you. Those opinions don't define you.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-shield"></i></div><div class="quote-text">A person who accepts themself as they are can inspire the world. Comparison has stolen my joy on many occasions. Your competition is you. Competing with others encourages bitterness, not betterment.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-road"></i></div><div class="quote-text">No two single journeys are the same. You're on your own path. Be grateful for what you have right now. And remember how far you've come as you continue in the direction of your dreams.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chart-line"></i></div><div class="quote-text">Many of the things you've achieved today are things you dreamed about in the past. We remember everything that we've done wrong, but hardly ever think about the things we've done right.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-star"></i></div><div class="quote-text">Be proud of yourself. You've fought hard to get where you are today. Embrace your uniqueness. Every mistake you make can help you to improve as a person.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-dove"></i></div><div class="quote-text">Accept what has happened. Breathe it in, breathe it out and let it go. When you forgive people you don't improve the past, you improve your present and future. Those who cannot forgive people who've hurt them will only fall victim to them.</div></div>
+  </div>
+
+  <!-- ========= NEW SECTION 6: Manifesting Goals: Mind work ========= -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-brain"></i> 6. Manifesting Goals: Mind work</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-gem"></i></div><div class="quote-text">Whatever the mind of man can conceive and believe, it can achieve.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-smile"></i></div><div class="quote-text">A positive mind gives you a positive life.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-thumbs-up"></i></div><div class="quote-text">A positive thought such as "You can do it" will allow you to try – giving you a greater chance of achieving your goal.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chart-line"></i></div><div class="quote-text">Every great accomplishment in the world has grown from the idea that it's possible.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-clock"></i></div><div class="quote-text">It's never too late to change your thoughts and reshape your beliefs to support, rather than hinder, yourself.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-ban"></i></div><div class="quote-text">You can't move forward with thoughts that hold you back.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-globe"></i></div><div class="quote-text">Our perception of the world is rooted in our beliefs. These beliefs are our individual truths that build our subjective realities.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-road"></i></div><div class="quote-text">We live our lives based on the beliefs that we've acquired through our experiences and accumulation of knowledge. Consequently, we all view the world differently.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-brain"></i></div><div class="quote-text">It is your subconscious mind that is responsible for your beliefs. All that you perceive is a result of what you accept as true in your subconscious mind.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-microchip"></i></div><div class="quote-text">The conscious mind thinks, the subconscious mind absorbs.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-eye"></i></div><div class="quote-text">If you can't change a situation, change your perception of it. That's where your personal power is. Either be controlled – or be in control.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-fist-raised"></i></div><div class="quote-text">My violence was born from anger, which is a defence against pain. Yet I wasn't a violent person; I'd often physically hurt kids and then right away I'd feel guilty and ask them if they were okay.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-tv"></i></div><div class="quote-text">The drama wasn't worth it.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-exchange-alt"></i></div><div class="quote-text">Your goal isn't to get rid of negative thoughts; it's to change your response to them.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-sun"></i></div><div class="quote-text">You're only ever one positive thought away from a more desirable outcome.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-unlock-alt"></i></div><div class="quote-text">Escape your mental limitations. Don't spend your life being imprisoned by a belief system that limits your potential and prevents your dreams from coming true.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-rocket"></i></div><div class="quote-text">I can change my future and achieve great things.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-graduation-cap"></i></div><div class="quote-text">There are always success stories out there that will assist you in this process.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-users"></i></div><div class="quote-text">Pick people who are supportive, not destructive.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-comment"></i></div><div class="quote-text">Words can hurt, help or heal. There's power in everything you write and say. Your message is significant; be wise with it.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-question-circle"></i></div><div class="quote-text">If you're unsure about what you want, you'll end up with a lot of things you're unsure of.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-dice-d6"></i></div><div class="quote-text">If you're confused about your intention, the results that follow will reflect that.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-bullseye"></i></div><div class="quote-text">Setting the right goal is everything. It has to reflect what you deeply desire – not what you think you should want.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-glasses"></i></div><div class="quote-text">If you have big goals, that's fine. Thinking big means you're open to receiving big.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-magic"></i></div><div class="quote-text">What becomes real in your mind will become real in your life.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chart-line"></i></div><div class="quote-text">If you imagine yourself to be more confident than you currently are and the brain thinks it's true, you'll be more confident!</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-infinity"></i></div><div class="quote-text">Don't worry about how it's going to happen, otherwise you'll begin to create limitations. Just be certain about what you want and the entire Universe will rearrange itself for you. Whatever the path you might be on right now, it will support you. It will provide you with the signs to get you to where you want to be.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-circle-dot"></i></div><div class="quote-text">The Universe is not outside you. Look inside yourself; everything that you want, you already are.</div></div>
+  </div>
+
+  <!-- ========= NEW SECTION 7: Manifesting Goals: Taking Actions ========= -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-running"></i> 7. Manifesting Goals: Taking Actions</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-location-dot"></i></div><div class="quote-text">It's not about where you're at. It's about what you're doing about where you're at.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-comment-dots"></i></div><div class="quote-text">Many of us have a series of excuses ready to explain why something can't be done.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-eye"></i></div><div class="quote-text">What you do need is a vision, a belief in it, and serious dedication. You'll find a way if you keep taking action.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hand-peace"></i></div><div class="quote-text">Sometimes, steps towards your goals come disguised as opportunities to take action. If you don't take action, you'll miss out on the reward.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-brain"></i></div><div class="quote-text">A lot people know what to do, but they still don't do it. They rely on justification or an easier solution because the real solution seems too long-winded.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-fire"></i></div><div class="quote-text">Great pain and pressure can force great changes to occur.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-rocket"></i></div><div class="quote-text">Step out of your comfort zone and face your fears. Growth takes place when you are challenged, not when you are comfortable.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chart-line"></i></div><div class="quote-text">We must be consistent as we strive to achieve our goals.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-calendar-check"></i></div><div class="quote-text">If you want to reap the benefits, you have to do regular, solid practice. Be committed to the cause. With consistency, we can create habits that shape our lives.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hourglass-half"></i></div><div class="quote-text">If something is important to you, you'll make the time for it.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-shuffle"></i></div><div class="quote-text">Not everything will work, or be the best fit, for you. Reviewing your methods and adapting to change is vital.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-cloud-sun"></i></div><div class="quote-text">Maintaining your motivation isn't always an easy task, especially following a setback or on a dark and gloomy day.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hourglass-start"></i></div><div class="quote-text">Manifest your goals. Do it before procrastination becomes the assassination of your dreams.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-frown"></i></div><div class="quote-text">He lacked self-belief. He doubted his own potential and he didn't want to feel uncomfortable by compromising his existing lifestyle.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-clock"></i></div><div class="quote-text">Time is the most precious commodity you have.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-gamepad"></i></div><div class="quote-text">When you're unwilling to delay temporary pleasures, this can have massive implications for your future.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hand-peace"></i></div><div class="quote-text">Sometimes we have to sacrifice small things to get our hands on the bigger blessings in life.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-shield"></i></div><div class="quote-text">Fear keeps our lives mediocre, because it forces us to flee from our potential, rather than from anything truly harmful.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hands-praying"></i></div><div class="quote-text">Sometimes all we have is our faith – our faith in the fact that things are going to get better. Hang on to it and keep believing, even if that means you're the only one who does.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-water"></i></div><div class="quote-text">Embrace good vibes and learn to let things flow. There is no need to force outcomes. Once you are in harmony with the Universe, what's meant to be yours will come to you.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-arrow-right-arrow-left"></i></div><div class="quote-text">Rejections are just redirections to better things.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chalkboard-user"></i></div><div class="quote-text">However big any failure may feel at the time, there's always a lesson to learn.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-feather"></i></div><div class="quote-text">Learn to let go and let things flow.</div></div>
+  </div>
+
+  <!-- ========= NEW SECTION 8: Pain and Purpose ========= -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-hand-fist"></i> 8. Pain and Purpose</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-dumbbell"></i></div><div class="quote-text">Life doesn't battle you because you're weak, it battles you because you're strong. It knows that if it gives you pain, you'll realize your power.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-gem"></i></div><div class="quote-text">Everything happens for a reason.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chart-line"></i></div><div class="quote-text">Every experience in your life is designed to shape you and help you grow into the highest and mightiest version of yourself.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-tree"></i></div><div class="quote-text">Even a negative experience can be seen as an opportunity for growth, rather than a time for suffering.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hourglass-start"></i></div><div class="quote-text">Don't let your circumstances define your future.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-eye"></i></div><div class="quote-text">Just because you can't see the point behind a challenging time, doesn't mean there isn't one.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-smile"></i></div><div class="quote-text">As we begin to change our perception to a positive one, our life improves.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-cloud-sun"></i></div><div class="quote-text">Life will test you just before it will bless you.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-fire"></i></div><div class="quote-text">Some of the best changes in life result from the most painful experiences.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-mountain"></i></div><div class="quote-text">We need to experience low points in our life in order to gain the wisdom, strength and knowledge we need to appreciate the high points.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-link"></i></div><div class="quote-text">Everything is connected.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-brain"></i></div><div class="quote-text">Life provides us with lessons that we can handle and that will bring out the best in us.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-chalkboard-user"></i></div><div class="quote-text">If something doesn't go the way you wanted, ask yourself what you can learn from it – because every bad experience has a learning outcome to be taken on board.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-star"></i></div><div class="quote-text">You came here loaded with potential, ability, gifts, wisdom, love and intelligence to share with the world. You are here to make the world a better place. You have a purpose, and until you start living it you will have a void inside of you; a feeling you can't quite explain, but that knows that you are meant for more.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-heart"></i></div><div class="quote-text">Life is greater if you live with purpose. When you find a meaningful reason for doing what you do, you will feel complete.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hand-holding-usd"></i></div><div class="quote-text">Have faith that you can serve a purpose for humankind and also meet your financial needs.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-laugh-beam"></i></div><div class="quote-text">If you show your excitement to the Universe, it will give you more things to feel excited about.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-pen-fancy"></i></div><div class="quote-text">You were created with intention.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-globe"></i></div><div class="quote-text">There is a purpose behind your existence, and when you discover what it is, you will not only change the dynamics of the world, but also experience abundance in all areas of your life.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-coins"></i></div><div class="quote-text">Make money to assist you, not to complete you.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-face-frown"></i></div><div class="quote-text">There are people who do great things with their money, while the way others use it can reflect the misery inside their minds.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-smile-beam"></i></div><div class="quote-text">Happiness doesn't come from other people, from places or things. It comes from within.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-bullseye"></i></div><div class="quote-text">We have all these goals and desires in life, believing that once we achieve them, we'll be happy forever.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-crown"></i></div><div class="quote-text">Lasting happiness is what true success looks like.</div></div>
+  </div>
+
+  <!-- ========= NEW SECTION 9: Final Words ========= -->
+  <div class="section-group">
+    <div class="section-title"><i class="fas fa-feather-alt"></i> 9. Final Words</div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-shoe-prints"></i></div><div class="quote-text">One small step at a time, you'll build unstoppable momentum and move ever closer to the life you've dreamed of living.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-hand-holding-heart"></i></div><div class="quote-text">If you commit your whole heart to achieving something and it doesn't work out, you can take that as a promise from the Universe that it wasn't the right thing for you. Something better is coming. Keep going.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-water"></i></div><div class="quote-text">If something feels wonderfully, deeply, powerfully right, it probably is. Go with that. Let it flow.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-heart"></i></div><div class="quote-text">You have everything you need to create an exciting and beautiful life, and it all begins with loving yourself.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-comment"></i></div><div class="quote-text">Not to let anger get the better of me, because it would lead me to failure, and she encouraged me to communicate positively to others because I could heal them.</div></div>
+    <div class="quote-card"><div class="quote-icon"><i class="fas fa-trophy"></i></div><div class="quote-text">I love seeing people win.</div></div>
+  </div>
+
+  <div class="footer-note">
+    <i class="fas fa-quote-left"></i> Every single word preserved from <strong>Good Vibes, Good Life</strong> by Vex King <i class="fas fa-quote-right"></i><br><br> Manifesting Goals insights.<br>
+    Curated with intention by <strong>Pavan Mulkalla</strong> for <br><a href="https://instagram.com/__lifes_little_thoughts__" target="_blank" class="instagram-badge">
+      <i class="fab fa-instagram"></i> @__lifes_little_thoughts__
+    </a><br>
+    <span style="font-size: 0.75rem;">each quote stands alone — visually distinct, deeply honored.</span>
+  </div>
+</div>
+</body>
+</html>
